@@ -35,12 +35,6 @@
         font-family: Arial, Helvetica, sans-serif;
         text-decoration: none;
      }
-     ol a:hover {
-            color: red;
-            text-decoration: none;
-  
-
-    }
     .cover img{
         width: 100%;
         height: 560px;
@@ -62,15 +56,11 @@
         
     }
     h4{
-       position: absolute;
-        
+       position: absolute;  
         font-size: 18px;
-        font-family: barlow condensed,sans-serif;
-        
-        text-transform: uppercase;
-    
+        font-family: barlow condensed,sans-serif;  
+        text-transform: uppercase; 
     }
-
     .description-container{
         max-width: 100%;
         margin-top: 20px;
