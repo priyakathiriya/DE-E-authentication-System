@@ -24,19 +24,21 @@ public class Registration extends HttpServlet {
 		String phone=request.getParameter("phone");
 		String e=request.getParameter("email");
 		String dob=request.getParameter("dob");
+		String g=request.getParameter("gender");
 		String c=request.getParameter("country");
 
 		try{
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mysql2","root","");
-		PreparedStatement ps=con.prepareStatement("insert into student values(?,?,?,?,?,?,?)");
+		PreparedStatement ps=con.prepareStatement("insert into student values(?,?,?,?,?,?,?.?)");
 		ps.setString(1, fname);
 		ps.setString(2, lname);
 		ps.setString(3, password);
 		ps.setString(4, phone);
 		ps.setString(5, e);
 		ps.setString(6, dob);
-		ps.setString(7, c);
+		ps.setString(7, g);
+		ps.setString(8, c);
 		int i=ps.executeUpdate();
 		if(i>0){
 		out.print("you are successfully registered....");
